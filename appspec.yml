@@ -1,0 +1,18 @@
+
+version: 0.0
+
+os: linux
+
+files:
+
+  - source: source
+
+    destination: /opt/codedeploy-agent/deployment-root/myboot
+
+hooks:
+
+  ApplicationStart:
+
+    - location: mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
+
+      timeout: 3600
