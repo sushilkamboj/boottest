@@ -5,7 +5,7 @@ os: linux
 
 files:
 
-  - source: source
+  - source: src
 
     destination: /opt/codedeploy-agent/deployment-root/myboot
 
