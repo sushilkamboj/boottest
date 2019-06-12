@@ -16,5 +16,3 @@ hooks:
     - location: mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 
       timeout: 3600
-      
-      
