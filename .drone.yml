@@ -5,7 +5,6 @@ steps:
 - name: build
   image: ubuntu
   commands:
-  commands:
     - git clone https://github.com/sushilkamboj/boottest.git
     - mvn clean package
     - mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
