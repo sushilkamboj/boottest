@@ -1,8 +1,21 @@
-build:
-  image: maven:3.3.3-jdk-8-onbuild
-  pull: true
-  environment:
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: ubuntu
   commands:
-    - git log | head -n 20
+  commands:
+    - git clone https://github.com/sushilkamboj/boottest.git
     - mvn clean package
     - mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
+  when:
+    branch:
+    - master
+    event:
+    - push
+  username: 
+  - from_secret: sushilkamboj
+  password:
+  - from_secret: Sk@3081974
+
