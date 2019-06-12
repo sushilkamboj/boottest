@@ -12,7 +12,7 @@ steps:
     branch:
     - master
     event:
-    - push
+    - pull-reqiest
   username: 
   - from_secret: sushilkamboj
   password:
